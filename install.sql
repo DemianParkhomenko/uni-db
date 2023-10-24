@@ -1,0 +1,8 @@
+DROP DATABASE IF EXISTS uni_db;
+
+DROP USER IF EXISTS demian;
+
+CREATE USER demian WITH PASSWORD 'demian';
+
+CREATE DATABASE uni_db OWNER demian;
+
