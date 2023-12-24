@@ -19,3 +19,12 @@ COMMIT;
 UPDATE teachers
 SET previous_experience_days = 33333
 WHERE teacher_id = 1;
+
+
+BEGIN;
+LOCK TABLE disciplines IN SHARE MODE;
+UPDATE teachers
+SET previous_experience_days = previous_experience_days + 100
+WHERE teacher_id = 1;
+COMMIT;
+
